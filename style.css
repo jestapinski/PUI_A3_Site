@@ -1,19 +1,102 @@
+:root {
+  --main-nav-color: #B19E8D;
+  --text-color: black;
+  --ff: 'Avenir';
+  --nav-fs: 18pt;
+  --off-white: #EFECEA;
+  --nav-height-offset: 2.5%;
+}
+
+body {
+  background-color: #D2C7BB;
+}
+
 h1 {
-	margin-top: 0;
-	padding-bottom: 10px;
-	padding-top: 10px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Avenir'
 }
 
 nav {
-	background-color: teal
+  position:absolute;
+  left:0%;
+  top:0%;
+  margin: 0px;
+  padding: 0;
+  width: 100%;
+  background-color: var(--main-nav-color)
+}
+
+.nav-right {
+  margin-top: var(--nav-height-offset);
+  float: right;
+}
+
+ul {
+    list-style-type: 'pipe';
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar {
+  display: inline-block;
+    position:absolute;
+    width: 40%;
+    padding-left: var(--nav-height-offset);
+    padding-top:2%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 2%;
+  font-family: var(--ff);
+  font-style: italic;
+}
+
+li:before { 
+  content: " | ";
+  color: var(--off-white);
+  font-family: var(--ff);
+  font-size: var(--nav-fs);
+  padding: 10px;
+} 
+
+li {
+    display: inline;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--ff);
+  font-size: var(--nav-fs);
 }
 
 .container {
-	margin-left: 10%;
-	margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .header-link {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.centered {
+  text-align: center;
+  display: inline;
+}
+
+footer {
+  width:100%;
+  height:4%;
+  padding-top:10px;
+  border-top: 1px solid #000;
+  background-color: white;
+  font-family: 'Avenir';
+  font-size:18px;
+  position:fixed;
+  bottom:0;
+  left:0;
 }
