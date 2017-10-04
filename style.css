@@ -1,3 +1,4 @@
+/* Defining CSS Variables */
 :root {
   --main-nav-color: #B19E8D;
   --highlight-blue: #257ADD;
@@ -17,9 +18,10 @@ h1 {
   margin-top: 0;
   padding-bottom: 10px;
   padding-top: 10px;
-  font-family: 'Avenir'
+  font-family: var(--ff);
 }
 
+/* Putting the Nav at absolutely (0,0) */
 nav {
   position:absolute;
   left:0%;
@@ -30,25 +32,27 @@ nav {
   background-color: var(--main-nav-color)
 }
 
+/* Have the links in the nav bar to float to the right on the bar */
 .nav-right {
   margin-top: var(--nav-height-offset);
   float: right;
 }
 
 ul {
-    list-style-type: 'pipe';
     margin: 0;
     padding: 0;
 }
 
+/* Displaying the search bar in the nav bar */
 .search-bar {
   display: inline-block;
-    position:absolute;
-    width: 40%;
-    padding-left: var(--nav-height-offset);
-    padding-top:2%;
+  position:absolute;
+  width: 40%;
+  padding-left: var(--nav-height-offset);
+  padding-top:2%;
 }
 
+/* Changing the styling of the input text in the search bar */
 .search-bar input {
   width: 100%;
   padding: 2%;
@@ -61,11 +65,15 @@ ul {
   font-size: 14pt;
 }
 
+/* Changing the styling of the placeholder text in the search bar 
+  *Chrome only!* 
+*/
 ::-webkit-input-placeholder {
   font-size: 14pt;
 }
 
 li:before { 
+  /* Pipe-delimeted */
   content: " | ";
   color: var(--off-white);
   font-family: var(--ff);
@@ -77,6 +85,7 @@ li {
     display: inline;
 }
 
+/* Changing default link style to be more stylish */
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -84,11 +93,16 @@ a {
   font-size: var(--nav-fs);
 }
 
-.contain {
+/* Positioning the background image on the index page */
+.bg-img {
     position: relative;
     text-align: center;
     color: white;
     height: 40%;
+}
+
+.bg-img img {
+  width: 100%;
 }
 
 h2 { 
@@ -98,20 +112,24 @@ h2 {
    width: 100%; 
 }
 
+/* Creating a container to stay away from margins */
 .container {
   margin-left: 5%;
   margin-right: 5%;
 }
 
+/* Making the top links black and not underlined */
 .header-link {
   color: inherit;
   text-decoration: none;
 }
 
+/* Push the background color and image all the way across the screen */
 body {
   margin: 0;
 }
 
+/* Footer styling across the bottom of the screen */
 footer {
   width:100%;
   height:4%;
@@ -120,31 +138,139 @@ footer {
   padding-bottom: 20px;
   border-top: 1px solid #000;
   background-color: white;
-  font-family: 'Avenir';
+  font-family: var(--ff);
   font-size:14px;
   position:relative;
 }
 
+/* Styling center text on the index page "Fall into Comfort" */
 .center-text {
   font-family: var(--ff);
   font-size: var(--top-fs);
   font-style: italic;
   color: black;
+  padding-top: 0px;
 }
 
+/* Styling the Featured Items Text on the index page */
+.category-text {
+  font-family: var(--ff);
+  font-size: 24pt;
+  font-style: bold;
+  color: black;
+  margin-top: 0;
+}
+
+/* Styling the Featured Items Text on the index page */
+.sub-category-text {
+  font-family: var(--ff);
+  font-size: 18pt;
+  color: black;
+  margin-top: 0;
+}
+
+/* Styling the Featured Items Text on the index page */
 .callout-text {
   font-family: var(--ff);
   font-size: 24pt;
   color: black;
 }
 
+/* Styling the "View the Fall Collection" text on the index page */
 .under-text {
   font-family: var(--ff);
   font-size: var(--nav-fs);
   color: var(--highlight-blue);
+  padding-top: 80px;
 }
 
-/* Centered text */
+.quarter {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+}
+
+.item_1 {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 50%;
+    display: inline;
+}
+
+.item_1:hover {
+  background-color: gray;
+}
+
+.item_2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    width: 50%;
+    display: inline;
+}
+
+.item_2:hover {
+  background-color: gray;
+}
+
+.item_3 {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 50%;
+    display: inline;
+}
+
+.item_3:hover {
+  background-color: gray;
+}
+
+.item_4 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    width: 50%;
+    display: inline;
+}
+
+.item_4:hover {
+  background-color: gray;
+}
+
+.item_5 {
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 50%;
+    display: inline;
+}
+
+.item_5:hover {
+  background-color: gray;
+}
+
+.item_6 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    width: 50%;
+    display: inline;
+}
+
+.item_6:hover {
+  background-color: gray;
+}
+
+/* Centered text in the footer */
 .centered {
     position: absolute;
     top: 50%;
@@ -152,17 +278,23 @@ footer {
     transform: translate(-50%, 0%);
 }
 
+/* Left text in the footer */
 .left-text {
     position: absolute;
     top: 50%;
     transform: translate(100% , 0%);
 }
 
+/* Right text in the footer */
 .right-text {
     float: right;
     padding-right: 50px;
 }
 
+/*  
+Card CSS code borrowed from
+https://www.w3schools.com/howto/howto_css_cards.asp
+*/
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -175,11 +307,41 @@ footer {
     margin-bottom: 5%;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card img {
+  width:100%;
+}
+
+.card-category {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    background-color: var(--off-white);
+    display: inline-block;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 5%;
+}
+
+.card-category:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-category img {
+  width:100%;
+  opacity: 0.3;
+      position: relative;
+    text-align: center;
+    color: white;
+    height: 40%;
+}
+
+/* Styling the item and price text within the cards */
 .item-text {
   font-family: var(--ff);
   font-size: 12pt;
