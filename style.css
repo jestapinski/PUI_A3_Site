@@ -118,6 +118,18 @@ h2 {
   margin-right: 5%;
 }
 
+/* Creating a container to stay away from margins */
+.container-tight {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+/* Creating a container to stay away from margins */
+.container-right {
+  margin-left: 0%;
+  margin-right: 0%;
+  display: inline-block;
+}
+
 /* Making the top links black and not underlined */
 .header-link {
   color: inherit;
