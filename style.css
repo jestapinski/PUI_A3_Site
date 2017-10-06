@@ -1,3 +1,11 @@
+/*
+Jordan Stapinski (jstapins)
+05-430 A3
+style.css
+
+Outlining style for elements in html pages
+*/
+
 /* Defining CSS Variables */
 :root {
   --main-nav-color: #B19E8D;
@@ -8,17 +16,13 @@
   --top-fs: 32pt;
   --off-white: #EFECEA;
   --nav-height-offset: 2.5%;
+  --dark-brown: #836852;
+  --sand-brown: #BC8F6C;
 }
 
+/* Define a calming background color for the site */
 body {
   background-color: #D2C7BB;
-}
-
-h1 {
-  margin-top: 0;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-family: var(--ff);
 }
 
 /* Putting the Nav at absolutely (0,0) */
@@ -39,8 +43,8 @@ nav {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Displaying the search bar in the nav bar */
@@ -54,7 +58,7 @@ ul {
 
 /* Changing the styling of the input text in the search bar */
 .search-bar input {
-  width: 100%;
+  width: 80%;
   padding: 2%;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -63,6 +67,19 @@ ul {
   border-radius: 8px;
   text-align: right;
   font-size: 14pt;
+}
+
+/* Styling the button on the search bar to be more consistent to UI */
+.search-bar button {
+  margin-left: 2%;
+  width: 10%;
+  padding: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 8px;
+  background-color: var(--dark-brown);
+  font-family: var(--ff);
+  font-size: 20px;
 }
 
 /* Changing the styling of the placeholder text in the search bar 
@@ -105,25 +122,19 @@ a {
   width: 100%;
 }
 
-h2 { 
-   position: absolute; 
-   top: 200px; 
-   left: 0; 
-   width: 100%; 
-}
-
 /* Creating a container to stay away from margins */
 .container {
   margin-left: 5%;
   margin-right: 5%;
 }
 
-/* Creating a container to stay away from margins */
+/* Creating a right-leaning strict container */
 .container-tight {
   margin-left: 20%;
   margin-right: 0%;
 }
-/* Creating a container to stay away from margins */
+
+/* Creating right inline elements in a container */
 .container-right {
   margin-left: 0%;
   margin-right: 0%;
@@ -136,6 +147,7 @@ h2 {
   text-decoration: none;
 }
 
+/* Put some padding on the site logo on the top left */
 .top-logo {
   width: 5%;
   padding-top: 5px;
@@ -158,6 +170,12 @@ footer {
   font-family: var(--ff);
   font-size:14px;
   position:relative;
+}
+
+/* Add basic text formatting to the textarea element */
+textarea {
+  font-family: var(--ff);
+  font-size: 14pt;  
 }
 
 /* Styling center text on the index page "Fall into Comfort" */
@@ -193,6 +211,7 @@ footer {
   color: black;
 }
 
+/* Text formatting options for the customization options on the detail page */
 .customize-text {
   font-family: var(--ff);
   font-size: 18pt;
@@ -207,6 +226,7 @@ footer {
   padding-top: 80px;
 }
 
+/* Pushing over a quarter of the screen */
 .quarter {
     position: absolute;
     top: 25%;
@@ -215,6 +235,22 @@ footer {
     width: 100%;
 }
 
+/* Consistent hover effects for the elements on the browse page */
+.cat_option:hover {
+  background-color: gray;
+}
+
+/* 
+item_(1-6) refer to elements on the browse page in the cards,
+the layout is as follows:;
+________________________
+|       Title          |
+|  item_1      item_2  |
+|  item_3      item_4  |
+|  item_5      item_6  |
+------------------------
+*/
+
 .item_1 {
     position: absolute;
     top: 40%;
@@ -222,10 +258,6 @@ footer {
     transform: translate(0%, 0%);
     width: 50%;
     display: inline;
-}
-
-.item_1:hover {
-  background-color: gray;
 }
 
 .item_2 {
@@ -237,10 +269,6 @@ footer {
     display: inline;
 }
 
-.item_2:hover {
-  background-color: gray;
-}
-
 .item_3 {
     position: absolute;
     top: 60%;
@@ -248,10 +276,6 @@ footer {
     transform: translate(0%, 0%);
     width: 50%;
     display: inline;
-}
-
-.item_3:hover {
-  background-color: gray;
 }
 
 .item_4 {
@@ -263,10 +287,6 @@ footer {
     display: inline;
 }
 
-.item_4:hover {
-  background-color: gray;
-}
-
 .item_5 {
     position: absolute;
     top: 80%;
@@ -276,10 +296,6 @@ footer {
     display: inline;
 }
 
-.item_5:hover {
-  background-color: gray;
-}
-
 .item_6 {
     position: absolute;
     top: 80%;
@@ -287,10 +303,6 @@ footer {
     transform: translate(0%, 0%);
     width: 50%;
     display: inline;
-}
-
-.item_6:hover {
-  background-color: gray;
 }
 
 /* Centered text in the footer */
@@ -355,13 +367,16 @@ https://www.w3schools.com/howto/howto_css_cards.asp
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+/* End borrowed code */
+
+/* Placing an image completely through the card */
 .card-category img {
   width:100%;
   opacity: 0.3;
-      position: relative;
-    text-align: center;
-    color: white;
-    height: 40%;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 40%;
 }
 
 /* Styling the item and price text within the cards */
@@ -372,6 +387,7 @@ https://www.w3schools.com/howto/howto_css_cards.asp
   margin-bottom: 4px;
 }
 
+/* The name of the person in the product detail review */
 .review-name-text {
   font-family: var(--ff);
   font-size: 16pt;
@@ -379,6 +395,7 @@ https://www.w3schools.com/howto/howto_css_cards.asp
   margin-top: 0;
 }
 
+/* The price of an item displayed on the index screen */
 .price-text {
   font-family: var(--ff);
   font-size: 10pt;
@@ -387,6 +404,7 @@ https://www.w3schools.com/howto/howto_css_cards.asp
   margin-top: 0;
 }
 
+/* Formatting for the link to more reviews on the detail page */
 .more-reviews-text {
   font-family: var(--ff);
   color: var(--highlight-blue);
@@ -396,6 +414,7 @@ https://www.w3schools.com/howto/howto_css_cards.asp
   margin-top: 0;
 }
 
+/* The review body text on the product detail page */
 .review-text {
   font-family: var(--ff);
   font-size: 10pt;
@@ -404,6 +423,7 @@ https://www.w3schools.com/howto/howto_css_cards.asp
   margin-top: 0;
 }
 
+/* The description item text on the detail page */
 .description-text {
   font-family: var(--ff);
   font-size: 10pt;
@@ -415,61 +435,82 @@ https://www.w3schools.com/howto/howto_css_cards.asp
   float: left;
 }
 
+/* Heading for the review text on the product detail page */
 .review-header {
   margin-left: 28%; 
   display: inline-block;
 }
 
+/* Defining size of the textarea on the product detail page */
 textarea {
   width: 30%; 
   margin-left: 6%; 
   height: 80px;
 }
 
+/* Defining size of the customization properties on the product detail page */
 .prop {
   margin-left: 6%;
   display: inline-block;
   width: 30%; 
 }
 
+/* Product image size and formatting, accounting for blank png pixels */
 .prod-img {
   width: 45%;
   margin-left: -6%;
   float: left;
 }
 
+/* Erasing a bottom margin */
 .no-bottom {
   margin-bottom: 0;
 }
 
+/* Pushing an object greatly from upper elements */
 .high-top {
   margin-top: 10%;
 }
 
+/* Pushing an object minutely from upper elements */
 .lo-top {
   margin-top: 1%;
 }
 
+/* Aligning elements in the center of a div */
+.center-align {
+  text-align: center;
+}
+
+/* Formatting options for the upper review stars on the product detail page */
 .large-stars {
   width: 176px; 
   height: 36px;
 }
 
+/* Formatting options for the lower review stars on the product detail page */
 .small-stars {
   width: 83px;
   height: 17px;
 }
 
+/* Displaying an object inline */
 .inline {
   display: inline;
 }
 
+/* Formatting the "Add to Cart" button on the product detail page for UI consistency */
 .add-to-cart-button {
-  width: 10%; 
+  width: 15%; 
   margin-left: 6%; 
   margin-top: 2%;
+  font-family: var(--ff);
+  font-size: 14pt;
+  background-color: var(--sand-brown);
+  border-radius: 8px;
 }
 
+/* Formatting the "Quantity" text on the product detail page */
 .quantity {
   width: 10%; 
   margin-left: 6%; 
@@ -477,12 +518,25 @@ textarea {
   margin-top: 2%;
 }
 
+/* Specifying the general width for buttons */
 button {
   width: 5%;
 }
 
+/* Specifying formats for the select on the product detail page */
+select {
+  font-family: var(--ff);
+  font-size: 14pt;
+}
+
+/* Indenting review name and text */
 .right-review {
   width: 34%;
   display: inline-block;
   margin-left: 15%;
+}
+
+/* General padding to separate content from the top nav */
+.top-nav-separator {
+  padding-top: 7%;
 }
